@@ -36,5 +36,5 @@ Lihtne veebirakendus, mis kuvab bussiliinide infot (alguspunkt, sihtkoht, välju
        <end>Viljandi</end>
        <departureTime>2024-12-21T12:00</departureTime>
        <price>12.00</price>
-       <duration>2h</duration>
+       <duration>2t</duration>
    </route>

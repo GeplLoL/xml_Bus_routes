@@ -8,11 +8,11 @@ Lihtne veebirakendus, mis kuvab bussiliinide infot (alguspunkt, sihtkoht, välju
 ## Kasutamine
 
 1. **Kopeeri projekt kausta**:  
-   `C:/xampp/htdocs/bussijaam`
+   `C:/xampp/htdocs/bus_routes`
 2. **Käivita XAMPP** ja veendu, et Apache töötab.
 3. **Ava brauseris**:  
-   - Tabeli vaatamiseks: [http://localhost/bussijaam/index.php](http://localhost/bussijaam/index.php)  
-   - JSON-faili genereerimiseks: [http://localhost/bussijaam/generate_json.php](http://localhost/bussijaam/generate_json.php)
+   - Tabeli vaatamiseks: [http://localhost/bus_routes/index.php](http://localhost/bus_routes/index.php)  
+   - JSON-faili genereerimiseks: [http://localhost/bus_routes/generate_json.php](http://localhost/bus_routes/generate_json.php)
 
 ---
 

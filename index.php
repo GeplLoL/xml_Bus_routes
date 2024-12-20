@@ -5,15 +5,15 @@ if ($xml === false) {
     die("XML-faili laadimine ebaõnnestus.");
 }
 
-// Получаем данные для фильтрации
+// Filtreerimisandmete saamine
 $filterStart = $_GET['filterStart'] ?? '';
 $filterEnd = $_GET['filterEnd'] ?? '';
 $filterPrice = $_GET['filterPrice'] ?? '';
 $search = $_GET['search'] ?? '';
 $sortField = $_GET['sortField'] ?? '';
-$sortOrder = $_GET['sortOrder'] ?? 'asc'; // asc = возрастание, desc = убывание
+$sortOrder = $_GET['sortOrder'] ?? 'asc'; // asc = kasvavalt, desc = kahanevalt
 
-// Фильтруем данные
+// Andmete filtreerimine
 $routes = [];
 foreach ($xml->route as $route) {
     $addRoute = true;
@@ -39,7 +39,7 @@ foreach ($xml->route as $route) {
     }
 }
 
-// Сортировка
+// Sorteerimine
 if ($sortField) {
     usort($routes, function ($a, $b) use ($sortField, $sortOrder) {
         $valueA = (string) $a->$sortField;
@@ -70,7 +70,7 @@ if ($sortField) {
 <body>
     <h1>Bussijaama haldussüsteem</h1>
 
-    <!-- Форма фильтрации -->
+    <!-- Filtreerimisvorm -->
     <form method="GET" action="">
         <label for="filterStart">Alguspunkt:</label>
         <input type="text" id="filterStart" name="filterStart" value="<?= htmlspecialchars($filterStart) ?>">
@@ -87,7 +87,7 @@ if ($sortField) {
         <button type="submit">Filtreeri</button>
     </form>
 
-    <!-- Форма сортировки -->
+    <!-- Sorteerimisvorm -->
     <form method="GET" action="">
         <input type="hidden" name="filterStart" value="<?= htmlspecialchars($filterStart) ?>">
         <input type="hidden" name="filterEnd" value="<?= htmlspecialchars($filterEnd) ?>">
@@ -111,7 +111,7 @@ if ($sortField) {
         <button type="submit">Sorteeri</button>
     </form>
 
-    <!-- Таблица маршрутов -->
+    <!-- Marsruutide tabel -->
     <table>
         <tr>
             <th>ID</th>

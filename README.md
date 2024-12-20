@@ -32,7 +32,7 @@ Lihtne veebirakendus, mis kuvab bussiliinide infot (alguspunkt, sihtkoht, välju
 1. **Marsruutide filtreerimine**:  
    Kasutaja saab filtreerida marsruute alguspunkti, sihtkoha ja maksimaalse hinna järgi.
 2. **Otsing**:  
-   Kasutaja saab otsida marsruute, sisestades märksõna (nt "Tallinn" või "2h").
+   Kasutaja saab otsida marsruute, sisestades märksõna (nt "Tallinn" või "2t").
 3. **Sorteerimine**:  
    Kasutaja saab sorteerida marsruute hinna, väljumisaja või kestuse järgi kasvavalt või kahanevalt.
 

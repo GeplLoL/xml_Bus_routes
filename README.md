@@ -1,4 +1,4 @@
-# bus_routesa haldussüsteem
+# Bussijaama haldussüsteem
 
 **Kirjeldus:**  
 Lihtne veebirakendus, mis kuvab bussiliinide infot (alguspunkt, sihtkoht, väljumisaeg, hind, kestus) tabelis, kasutades **XML**, **XSLT**, **PHP** ja **CSS**.

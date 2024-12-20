@@ -13,6 +13,51 @@ h1 {
     margin-bottom: 20px;
 }
 
+form {
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+form label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+form input,
+form select {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+form input[type="number"] {
+    max-width: 120px;
+}
+
+form input[type="radio"] {
+    margin-left: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
 table {
     width: 80%;
     margin: 0 auto;
@@ -40,4 +85,9 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #e6f7ff;
+}
+
+td[colspan="6"] {
+    font-style: italic;
+    color: #999;
 }

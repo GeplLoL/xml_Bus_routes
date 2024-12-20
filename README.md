@@ -19,31 +19,22 @@ Lihtne veebirakendus, mis kuvab bussiliinide infot (alguspunkt, sihtkoht, välju
 ## Failid
 
 - **`routes.xml`** – Marsruutide andmed XML-vormingus.  
-- **`transform.xsl`** – Teisendab XML-andmed HTML-tabeliks.  
-- **`style.css`** – Lisab kujunduse veebilehele ja tabelile.  
-- **`index.php`** – Töötleb XML-i ja XSLT-d tabeli kuvamiseks, lisades filtreerimise, otsingu ja sorteerimise funktsioonid.  
-- **`generate_json.php`** – Teisendab XML-i JSON-vormingusse.  
-- **`routes.json`** – Automaatne JSON-fail, mis salvestab marsruudid.
-
----
-
-## Funktsioonid
-
-1. **Marsruutide filtreerimine**:  
-   Kasutaja saab filtreerida marsruute alguspunkti, sihtkoha ja maksimaalse hinna järgi.
-2. **Otsing**:  
-   Kasutaja saab otsida marsruute, sisestades märksõna (nt "Tallinn" või "2t").
-3. **Sorteerimine**:  
-   Kasutaja saab sorteerida marsruute hinna, väljumisaja või kestuse järgi kasvavalt või kahanevalt.
+- **`transform.xsl`** – XML-andmete teisendamine HTML-tabeliks.  
+- **`style.css`** – Kujundus fail HTML-lehele ja tabelile.  
+- **`generate_json.php`** – Teisendab XML-i JSON-andmeteks.  
+- **`routes.json`** – Automaatne JSON-fail (luuakse `generate_json.php` abil).
 
 ---
 
 ## Kuidas lisada uus marsruut?
 
 1. Ava **`routes.xml`** fail.
-2. Lisa uus marsruut, järgides olemasolevat struktuuri.  
-3. Salvesta muudatused.  
-4. Ava tabeli leht ([http://localhost/bus_routes/index.php](http://localhost/bus_routes/index.php)), et näha lisatud marsruuti.
-
----
-
+2. Lisa uus `<route>` sektsioon järgmisel kujul:
+   ```xml
+   <route id="2">
+       <start>Tartu</start>
+       <end>Viljandi</end>
+       <departureTime>2024-12-21T12:00</departureTime>
+       <price>12.00</price>
+       <duration>2t</duration>
+   </route>
